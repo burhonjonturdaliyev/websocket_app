@@ -141,16 +141,9 @@ class _WebSocketScreenState extends State<WebSocketScreen> {
 
       if (res == PosPrintResult.success) {
         print('Connection successful, starting print...');
-        printer.text(text,
-            styles: const PosStyles(
-                height: PosTextSize.size2,
-                width: PosTextSize.size2,
-                align: PosAlign.left,
-                bold: true,
-                underline: true));
         await Future.delayed(const Duration(milliseconds: 100));
         // Print content
-        printer.text('Web Socket Test',
+        printer.text('---NovaCode---',
             styles: const PosStyles(
                 height: PosTextSize.size2,
                 width: PosTextSize.size2,
@@ -159,56 +152,136 @@ class _WebSocketScreenState extends State<WebSocketScreen> {
                 underline: true));
         await Future.delayed(const Duration(milliseconds: 100));
 
-        // printer.text('Date: ${DateTime.now().toString().split(" ")[0]}',
-        //     styles: const PosStyles(align: PosAlign.left));
-        // printer.text(
-        //     'Time: ${DateTime.now().toString().split(" ")[1].split(".")[0]}',
-        //     styles: const PosStyles(align: PosAlign.left));
-        // await Future.delayed(const Duration(milliseconds: 100));
+        printer.text('Date: ${DateTime.now().toString().split(" ")[0]}',
+            styles: const PosStyles(
+              align: PosAlign.left,
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ));
+        printer.text(
+            'Time: ${DateTime.now().toString().split(" ")[1].split(".")[0]}',
+            styles: const PosStyles(
+              align: PosAlign.left,
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ));
+        await Future.delayed(const Duration(milliseconds: 100));
 
-        // printer.text('--- N1 Beton ---',
-        //     styles: const PosStyles(align: PosAlign.center, bold: true));
-        // await Future.delayed(const Duration(milliseconds: 100));
+        printer.text('--- N1 Beton ---',
+            styles: const PosStyles(
+              align: PosAlign.center,
+              bold: true,
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ));
+        await Future.delayed(const Duration(milliseconds: 100));
 
-        // // Adjusted column widths to ensure total width is 12
-        // printer.row([
-        //   PosColumn(text: 'Xodim', width: 6),
-        //   PosColumn(text: 'Abdushukur Tursunov', width: 6),
-        // ]);
-        // await Future.delayed(const Duration(milliseconds: 100));
+        // Adjusted column widths to ensure total width is 12
+        printer.row([
+          PosColumn(
+            text: 'Xodim',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+          PosColumn(
+            text: 'Abdushukur Tursunov',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+        ]);
+        await Future.delayed(const Duration(milliseconds: 100));
 
-        // printer.row([
-        //   PosColumn(text: 'Mijoz', width: 6),
-        //   PosColumn(text: 'SSS', width: 6),
-        // ]);
-        // printer.row([
-        //   PosColumn(text: 'Avtomabil', width: 6),
-        //   PosColumn(text: '60008KAA', width: 6),
-        // ]);
-        // await Future.delayed(const Duration(milliseconds: 100));
+        printer.row([
+          PosColumn(
+            text: 'Mijoz',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+          PosColumn(
+            text: 'SSS',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+        ]);
+        printer.row([
+          PosColumn(
+            text: 'Avtomabil',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+          PosColumn(
+            text: '60008KAA',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+        ]);
+        await Future.delayed(const Duration(milliseconds: 100));
 
-        // printer.text('Miqdori: 8 Kub',
-        //     styles: const PosStyles(align: PosAlign.right, bold: true));
-        // await Future.delayed(const Duration(milliseconds: 100));
-        // printer.row([
-        //   PosColumn(text: 'Manzil', width: 6),
-        //   PosColumn(text: 'Semashka', width: 6),
-        // ]);
-        // await Future.delayed(const Duration(milliseconds: 100));
-        // printer.row([
-        //   PosColumn(text: 'Telefon raqam', width: 6),
-        //   PosColumn(text: '+998906936594', width: 6),
-        // ]);
-        // await Future.delayed(const Duration(milliseconds: 100));
-        // printer.text('Thank you for shopping with us!',
-        //     styles: const PosStyles(align: PosAlign.center, bold: true));
-        // printer.text('Visit Again!',
-        //     styles: const PosStyles(align: PosAlign.center, bold: true));
-        // await Future.delayed(const Duration(milliseconds: 100));
-
+        printer.text('Miqdori: 8 Kub',
+            styles: const PosStyles(align: PosAlign.right, bold: true));
+        await Future.delayed(const Duration(milliseconds: 100));
+        printer.row([
+          PosColumn(
+            text: 'Manzil',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+          PosColumn(
+            text: 'Semashka',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+        ]);
+        await Future.delayed(const Duration(milliseconds: 100));
+        printer.row([
+          PosColumn(
+            text: 'Telefon raqam',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+          PosColumn(
+            text: '+998906936594',
+            width: 6,
+            styles: const PosStyles(
+              height: PosTextSize.size2,
+              width: PosTextSize.size2,
+            ),
+          ),
+        ]);
+        await Future.delayed(const Duration(milliseconds: 100));
+        printer.text('');
+        await Future.delayed(const Duration(milliseconds: 100));
+        printer.text('');
+        await Future.delayed(const Duration(milliseconds: 100));
         printer.cut();
         printer.disconnect();
-
         print('Print successful');
       } else {
         print('Print failed: ${res.msg}');
